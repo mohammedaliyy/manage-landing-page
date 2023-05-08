@@ -28,11 +28,24 @@
         <li><a href="#">Community</a></li>
       </ul>
       <a href="#" class="btn header__btn">Get Started</a>
+      <img src="images/icon-hamburger.svg" alt="#" class="header__hamburger" />
+      <img src="images/icon-close.svg" alt="#" class="header__close" />
     </header>
     <!-- header end -->
 
     <!-- main start -->
     <main class="main container">
+      <!-- popup start -->
+      <div class="popup">
+        <ul class="popup__nav">
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+      </div>
+      <!-- popup end -->
       <div class="main__body">
         <h1>Bring everyone together to build better products.</h1>
         <p>
@@ -96,45 +109,13 @@
     <!-- manage end -->
 
     <!-- comments start -->
-    <section class="comments">
+    <section class="comments container">
       <h1>What they’ve said</h1>
       <div class="comments__body">
-        <div class="comments__box">
-          <img src="images/avatar-anisha.png" alt="#" />
-          <h4>Anisha Li</h4>
-          <p>
-            “Manage has supercharged our team’s workflow. The ability to
-            maintain visibility on larger milestones at all times keeps everyone
-            motivated.”
-          </p>
-        </div>
-        <div class="comments__box">
-          <img src="images/avatar-ali.png" alt="#" />
-          <h4>Ali Bravo</h4>
-          <p>
-            “We have been able to cancel so many other subscriptions since using
-            Manage. There is no more cross-channel confusion and everyone is
-            much more focused.”
-          </p>
-        </div>
-        <div class="comments__box">
-          <img src="images/avatar-richard.png" alt="#" />
-          <h4>Richard Watts</h4>
-          <p>
-            “Manage allows us to provide structure and process. It keeps us
-            organized and focused. I can’t stop recommending them to everyone I
-            talk to!”
-          </p>
-        </div>
-        <div class="comments__box">
-          <img src="images/avatar-shanai.png" alt="#" />
-          <h4>Shanai Gough</h4>
-          <p>
-            “Their software allows us to track, manage and collaborate on our
-            projects from anywhere. It keeps the whole team in-sync without
-            being intrusive.”
-          </p>
-        </div>
+        <!-- comments here  -->
+      </div>
+      <div class="comments__spans">
+        <span data-num="0" id="active"></span>
       </div>
       <a href="#" class="btn comments__btn">Get Started</a>
     </section>
@@ -153,7 +134,7 @@
     <!-- footer start -->
     <footer class="footer">
       <div class="footer__nav footer__nav_1">
-        <img src="images/logo.svg" alt="#" class="footer__logo"/>
+        <img src="images/logo.svg" alt="#" class="footer__logo" />
         <div class="footer__socials">
           <img src="images/icon-facebook.svg" alt="#" />
           <img src="images/icon-youtube.svg" alt="#" />
@@ -187,6 +168,7 @@
     </footer>
     <!-- footer end -->
 
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/data.js"></script>
   </body>
 </html>
