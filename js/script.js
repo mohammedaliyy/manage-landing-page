@@ -63,7 +63,6 @@ function start(slices) {
     }
   }
   letsBuild();
-  console.log(newData);
 
   // span div
   const parentSpan = document.querySelector(".comments__spans");
@@ -90,3 +89,35 @@ function start(slices) {
     });
   });
 }
+
+// Email check
+const emailInput = document.querySelector(".footer__input input");
+const goBtn = document.querySelector(".footer__btn");
+const span = document.querySelector(".footer__input span");
+
+goBtn.addEventListener("click", (e) => {
+  const value = emailInput.value.trim();
+  const atIndex = value.indexOf("@");
+  const finalValue = value.slice(atIndex);
+  setTimeout((e) => {
+    span.style.opacity = "1"
+    span.style.transition = ".8s opacity"
+    span.style.display = "block";
+    if (finalValue.includes("@") && finalValue.includes(".")) {
+      span.textContent = "Email has been sent successfully!";
+      span.style.color = "#32CD32";
+    } else {
+      span.textContent = "Please insert valid email!";
+      span.style.color = "var(--bright-red)";
+      emailInput.style.border = "2px solid var(--bright-red)";
+    }
+    emailInput.value = "";
+
+    setTimeout((e) => {
+      emailInput.style.border = "none";
+      span.style.opacity = "0"
+      // span.textContent = "";
+
+    }, 2800);
+  }, 800);
+});
